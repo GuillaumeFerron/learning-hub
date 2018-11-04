@@ -1,7 +1,7 @@
 {
-  "name": "cd-nuxt-boilerplate",
+  "name": "cd-learning-hub",
   "version": "1.0.0",
-  "description": "A boilerplate for Nuxt projects. It includes Bootstrap | SCSS | JQuery.",
+  "description": "A learning hub for the Candy Digital web development team.",
   "author": "GuillaumeFerron",
   "private": true,
   "scripts": {
