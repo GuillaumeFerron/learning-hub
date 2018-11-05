@@ -1,11 +1,24 @@
 <template>
-    <div class="row">
+    <div class="row mx-0">
         <nav-bar></nav-bar>
         <div class="col-10">
+            <h3 class="mt-4 mb-5 text-uppercase">{{ $route.name | navigationFormat }}</h3>
             <nuxt/>
         </div>
     </div>
 </template>
+
+<script>
+  import Navigation from '~/mixins/Navigation.vue';
+  import NavBar from './NavBar';
+
+  export default {
+    components: { NavBar },
+    mixins: [
+      Navigation
+    ]
+  };
+</script>
 
 <style>
     html {
@@ -56,10 +69,3 @@
         background-color: #35495e;
     }
 </style>
-<script>
-  import NavBar from './NavBar';
-
-  export default {
-    components: { NavBar }
-  };
-</script>
