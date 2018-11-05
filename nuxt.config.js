@@ -68,6 +68,19 @@ module.exports = {
   ],
 
   /*
+   * Router
+   */
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        name: 'notfound',
+        path: '*',
+        component: resolve(__dirname, 'pages/notfound.vue')
+      });
+    }
+  },
+
+  /*
   ** Build configuration
   */
   build: {

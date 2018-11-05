@@ -2,7 +2,7 @@
     <div class="row mx-0" id="default-container">
         <nav-bar></nav-bar>
         <div class="col-10">
-            <h3 class="mt-4 mb-5 text-uppercase">{{ $route.name | navigationFormat }}</h3>
+            <h3 class="py-4 text-uppercase border-bottom">{{ $route.name | navigationFormat }}</h3>
             <nuxt/>
         </div>
     </div>

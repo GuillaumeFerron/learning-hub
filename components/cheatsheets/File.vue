@@ -13,15 +13,18 @@
             <small class="text-secondary">{{ file_description }}</small>
         </div>
         <div class="col-12">
-            <span class="badge badge-secondary text-uppercase mr-2" v-for="(tag, index) in file_tags" :key="index">{{ tag }}</span>
+            <tag v-for="(tag, index) in file_tags" :tag="tag" :key="index"></tag>
         </div>
         <hr>
     </div>
 </template>
 
 <script>
+  import Tag from '../utils/Tag';
+
   export default {
     name: 'File',
+    components: { Tag },
     props: {
       name: {
         type: String,
