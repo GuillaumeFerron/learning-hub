@@ -1,5 +1,5 @@
 <template>
-    <span class="badge badge-secondary text-uppercase mr-2">{{ tag }}</span>
+    <span class="tag badge badge-secondary text-uppercase mr-2 px-2 py-1">{{ tag }}</span>
 </template>
 
 <script>
@@ -14,6 +14,8 @@
   };
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+    .tag {
+        border-radius: 25px;
+    }
 </style>
