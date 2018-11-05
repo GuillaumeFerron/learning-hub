@@ -13,7 +13,7 @@
             <small class="text-secondary">{{ file_description }}</small>
         </div>
         <div class="col-12">
-            <span class="badge badge-secondary text-uppercase mx-1" v-for="(tag, index) in file_tags" :key="index">{{ tag }}</span>
+            <span class="badge badge-secondary text-uppercase mr-2" v-for="(tag, index) in file_tags" :key="index">{{ tag }}</span>
         </div>
         <hr>
     </div>
