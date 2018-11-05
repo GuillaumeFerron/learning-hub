@@ -1,6 +1,9 @@
 <template>
-    <div>
-        <nuxt/>
+    <div class="row">
+        <nav-bar></nav-bar>
+        <div class="col-10">
+            <nuxt/>
+        </div>
     </div>
 </template>
 
@@ -53,3 +56,10 @@
         background-color: #35495e;
     }
 </style>
+<script>
+  import NavBar from './NavBar';
+
+  export default {
+    components: { NavBar }
+  };
+</script>
