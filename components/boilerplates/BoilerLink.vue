@@ -54,7 +54,7 @@
       description: {
         type: String,
         required: false,
-        default: 'A Candy Digital boilerplate.'
+        default: 'A CandyDigital boilerplate.'
       },
       tags: {
         type: Array,

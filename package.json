@@ -1,7 +1,7 @@
 {
   "name": "cd-learning-hub",
   "version": "1.0.0",
-  "description": "A learning hub for the Candy Digital web development team.",
+  "description": "A learning hub for the CandyDigital web development team.",
   "author": "GuillaumeFerron",
   "private": true,
   "scripts": {

@@ -7,6 +7,7 @@ import Vuex from 'vuex';
  */
 import {cheatsheetsState, cheatsheetsGetters} from './cheatsheets/index';
 import {boilerplatesState, boilerplatesGetters} from './boilerplates/index';
+import {videosState, videosGetters} from './videos/index';
 
 const createStore = () => new Vuex.Store({
   state: () => ({
@@ -25,6 +26,11 @@ const createStore = () => new Vuex.Store({
         name: 'cheatsheets',
         path: '/cheatsheets',
         icon: 'fa fa-paperclip'
+      },
+      {
+        name: 'videos',
+        path: '/videos',
+        icon: 'fa fa-video'
       }
     ]
   }),
@@ -40,6 +46,10 @@ const createStore = () => new Vuex.Store({
     boilerplates: {
       state: boilerplatesState,
       getters: boilerplatesGetters
+    },
+    videos: {
+      state: videosState,
+      getters: videosGetters
     }
   }
 });
