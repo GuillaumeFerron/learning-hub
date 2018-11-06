@@ -1,5 +1,5 @@
 <template>
-    <div class="file">
+    <div class="video-element">
         <div class="col-12">
             <span>{{ name }}</span>
             <a :href="fileUrl" target="_blank" class="file-preview">
@@ -10,12 +10,11 @@
             </a>
         </div>
         <div class="col-12">
-            <small class="text-secondary">{{ file_description }}</small>
+            <small class="text-secondary">{{ video_description }}</small>
         </div>
         <div class="col-12">
-            <tag v-for="(tag, index) in file_tags" :tag="tag" :key="index"></tag>
+            <tag v-for="(tag, index) in video_tags" :tag="tag" :key="index"></tag>
         </div>
-        <hr>
     </div>
 </template>
 
@@ -24,7 +23,7 @@
   import FileAccess from '~/mixins/FileAccess.vue';
 
   export default {
-    name: 'File',
+    name: 'video-element',
     components: { Tag },
     mixins: [FileAccess],
     props: {
@@ -39,22 +38,22 @@
       file_extension: {
         type: String,
         required: false,
-        default: '.pdf'
+        default: '.mp4'
       },
       directory: {
         type: String,
         required: true
       },
-      file_description: {
+      video_description: {
         type: String,
         required: false,
-        default: 'A CandyDigital cheatsheet.'
+        default: 'A CandyDigital video tutorial.'
       },
-      file_tags: {
+      video_tags: {
         type: Array,
         required: false
       }
-    }
+    },
   };
 </script>
 
