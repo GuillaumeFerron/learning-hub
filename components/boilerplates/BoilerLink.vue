@@ -59,7 +59,11 @@
       tags: {
         type: Array,
         required: false
-      }
+      },
+      directory: {
+        type: String,
+        required: true
+      },
     }
   };
 </script>
