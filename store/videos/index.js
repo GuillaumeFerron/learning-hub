@@ -9,11 +9,11 @@ const videosState = () => ({
       tags: ['animation', 'extension', 'css']
     }
   }
-});
+})
 
 const videosGetters = () => ({
   directory: state => state.videos.directory,
   files: state => state.videos.files
-});
+})
 
-export { videosGetters, videosState };
+export { videosGetters, videosState }

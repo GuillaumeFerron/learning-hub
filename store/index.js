@@ -1,13 +1,13 @@
 /* eslint import/no-extraneous-dependencies : 0 */
 
-import Vuex from 'vuex';
+import Vuex from 'vuex'
 
 /**
  * Modules
  */
-import {cheatsheetsState, cheatsheetsGetters} from './cheatsheets/index';
-import {boilerplatesState, boilerplatesGetters} from './boilerplates/index';
-import {videosState, videosGetters} from './videos/index';
+import { cheatsheetsState, cheatsheetsGetters } from './cheatsheets/index'
+import { boilerplatesState, boilerplatesGetters } from './boilerplates/index'
+import { videosState, videosGetters } from './videos/index'
 
 const createStore = () => new Vuex.Store({
   state: () => ({
@@ -52,6 +52,6 @@ const createStore = () => new Vuex.Store({
       getters: videosGetters
     }
   }
-});
+})
 
-export default createStore;
+export default createStore
