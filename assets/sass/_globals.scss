@@ -7,3 +7,15 @@
   font-weight: bold;
   border-left: solid 3px $cd-pink !important;
 }
+
+/**
+  Utils
+ */
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+video {
+  width: inherit;
+}

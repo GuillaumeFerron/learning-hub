@@ -2,15 +2,15 @@
   <div id="default-container" class="row mx-0">
     <nav-bar/>
     <div class="col-10">
-      <h3 class="py-4 text-uppercase border-bottom">{{ $route.name | navigationFormat }}</h3>
+      <h3 class="py-4 text-uppercase">{{ $route.name | navigationFormat }}</h3>
       <nuxt/>
     </div>
   </div>
 </template>
 
 <script>
-import Navigation from '~/mixins/Navigation.vue'
-import NavBar from './NavBar'
+import Navigation from '~/mixins/Navigation.js'
+import NavBar from '../components/utils/NavBar'
 
 export default {
   components: { NavBar },

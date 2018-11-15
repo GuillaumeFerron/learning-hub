@@ -58,7 +58,8 @@ export default {
     },
     tags: {
       type: Array,
-      required: false
+      required: false,
+      default: () => []
     },
     directory: {
       type: String,

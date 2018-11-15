@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Navigation from '~/mixins/Navigation.vue'
+import Navigation from '~/mixins/Navigation.js'
 
 export default {
   name: 'NavBar',

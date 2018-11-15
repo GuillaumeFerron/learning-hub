@@ -21,7 +21,7 @@
 
 <script>
 import Tag from '../utils/Tag'
-import FileAccess from '~/mixins/FileAccess.vue'
+import FileAccess from '~/mixins/FileAccess.js'
 
 export default {
   name: 'File',
@@ -52,7 +52,8 @@ export default {
     },
     file_tags: {
       type: Array,
-      required: false
+      required: false,
+      default: () => []
     }
   }
 }

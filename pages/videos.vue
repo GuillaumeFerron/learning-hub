@@ -8,6 +8,7 @@
       :file_extension="video.file_extension"
       :file_description="video.description"
       :video_tags="video.tags"
+      :meta="video.meta"
       :directory="$store.state.videos.directory"/>
   </div>
 </template>
