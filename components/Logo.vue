@@ -1,79 +1,138 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"/>
-    <div class="Triangle Triangle--one"/>
-    <div class="Triangle Triangle--three"/>
-    <div class="Triangle Triangle--four"/>
+  <div id="loader-container">
+    <div class="loader-content">
+      <div id="cube-container">
+        <div id="cube" class="animate">
+          <div> <img src="/images/preloader/side1.svg"> </div>
+          <div> <img src="/images/preloader/side2.svg"> </div>
+          <div> <img src="/images/preloader/side3.svg"> </div>
+          <div> <img src="/images/preloader/side4.svg"> </div>
+          <div> <img src="/images/preloader/side5.svg"> </div>
+          <div> <img src="/images/preloader/side6.svg"> </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<style>
-  .VueToNuxtLogo {
-    display: inline-block;
-    animation: turn 2s linear forwards 1s;
-    transform: rotateX(180deg);
-    position: relative;
-    overflow: hidden;
-    height: 180px;
-    width: 245px;
-  }
+<script>
 
-  .Triangle {
-    position: absolute;
+export default {
+  mounted() {
+    // eslint-disable-next-line no-undef
+    new TimelineMax({ repeat: -1 })
+      .to('#cube', 0.5, { rotation: 90 })
+      .to('#cube', 0.5, { rotationX: -90 })
+      .to('#cube', 0.5, { rotationY: 90 })
+      .to('#cube', 0.5, { rotation: 180 })
+      .to('#cube', 1.2, { rotationY: -180 })
+      .to('#cube', 0.5, { rotationX: -180 })
+  }
+}
+</script>
+
+<style scoped>
+  #loader-container {
+    display:table;
+    width:100%;
+    height:100%;
+    min-height:100%;
+    overflow-x:hidden;
+    /*overflow-y:hidden;*/
+    vertical-align:middle;
     top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
   }
 
-  .Triangle--one {
-    border-left: 105px solid transparent;
-    border-right: 105px solid transparent;
-    border-bottom: 180px solid #41b883;
+  .loader-content {
+    position:relative;
+    display:table-cell;
+    vertical-align:middle;
+    z-index:3;
+    text-align:center;
   }
 
-  .Triangle--two {
-    top: 30px;
-    left: 35px;
-    animation: goright 0.5s linear forwards 3.5s;
-    border-left: 87.5px solid transparent;
-    border-right: 87.5px solid transparent;
-    border-bottom: 150px solid #3b8070;
+  #cube-container {
+    -webkit-perspective:1000px;
+    -moz-perspective:1000px;
+    -o-perspective:1000px;
+    -ms-perspective:1000px;
+    perspective:1000px;
+    -webkit-perspective-origin:50% 50%;
+    -moz-perspective-origin:50% 50%;
+    -moz-transform-origin:50% 50%;
+    -o-perspective-origin:50% 50%;
+    -ms-perspective-origin:50% 50%;
+    perspective-origin:50% 50%;
   }
-
-  .Triangle--three {
-    top: 60px;
-    left: 35px;
-    animation: goright 0.5s linear forwards 3.5s;
-    border-left: 70px solid transparent;
-    border-right: 70px solid transparent;
-    border-bottom: 120px solid #35495e;
+  #cube {
+    position:relative;
+    margin:0 auto;
+    width:100px;
+    height:100px;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    transform-style:preserve-3d;
   }
-
-  .Triangle--four {
-    top: 120px;
-    left: 70px;
-    animation: godown 0.5s linear forwards 3s;
-    border-left: 35px solid transparent;
-    border-right: 35px solid transparent;
-    border-bottom: 60px solid #fff;
+  #cube>div {
+    position:absolute;
+    width:100px;
+    height:100px;
   }
-
-  @keyframes turn {
-    100% {
-      transform: rotateX(0deg);
-    }
+  #cube div:nth-child(1) {
+    -webkit-transform:translateZ(50px);
+    -moz-transform:translateZ(50px);
+    -o-transform:translateZ(50px);
+    -ms-transform:translateZ(50px);
+    transform:translateZ(50px);
+    background-color:#2E272F;
+    background-repeat:no-repeat;
   }
-
-  @keyframes godown {
-    100% {
-      top: 180px;
-    }
+  #cube div:nth-child(2) {
+    -webkit-transform:rotateY(90deg) translateZ(50px);
+    -moz-transform:rotateY(90deg) translateZ(50px);
+    -o-transform:rotateY(90deg) translateZ(50px);
+    -ms-transform:rotateY(90deg) translateZ(50px);
+    transform:rotateY(90deg) translateZ(50px);
+    background-color:#2D3A4D;
+    background-repeat:no-repeat;
   }
-
-  @keyframes goright {
-    100% {
-      left: 70px;
-    }
+  #cube div:nth-child(3) {
+    -webkit-transform:rotateY(180deg) translateZ(50px);
+    -moz-transform:rotateY(180deg) translateZ(50px);
+    -o-transform:rotateY(180deg) translateZ(50px);
+    -ms-transform:rotateY(180deg) translateZ(50px);
+    transform:rotateY(180deg) translateZ(50px);
+    background-color:#2D1C12;
+    background-repeat:no-repeat;
+  }
+  #cube div:nth-child(4) {
+    -webkit-transform:rotateY(-90deg) translateZ(50px);
+    -moz-transform:rotateY(-90deg) translateZ(50px);
+    -o-transform:rotateY(-90deg) translateZ(50px);
+    -ms-transform:rotateY(-90deg) translateZ(50px);
+    transform:rotateY(-90deg) translateZ(50px);
+    background-color:#693C1F;
+    background-repeat:no-repeat;
+  }
+  #cube div:nth-child(5) {
+    -webkit-transform:rotateX(-90deg) translateZ(50px) rotate(180deg);
+    -moz-transform:rotateX(-90deg) translateZ(50px) rotate(180deg);
+    -o-transform:rotateX(-90deg) translateZ(50px) rotate(180deg);
+    -ms-transform:rotateX(-90deg) translateZ(50px) rotate(180deg);
+    transform:rotateX(-90deg) translateZ(50px) rotate(180deg);
+    background-color:#955122;
+    background-repeat:no-repeat;
+  }
+  #cube div:nth-child(6) {
+    -webkit-transform:rotateX(90deg) translateZ(50px);
+    -moz-transform:rotateX(90deg) translateZ(50px);
+    -o-transform:rotateX(90deg) translateZ(50px);
+    -ms-transform:rotateX(90deg) translateZ(50px);
+    transform:rotateX(90deg) translateZ(50px);
+    background-color:#E34C26;
+    background-repeat:no-repeat;
+    text-align: center;
   }
 </style>
