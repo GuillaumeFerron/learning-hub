@@ -1,12 +1,12 @@
 <template>
-  <div :class="`dropdown-container card mx-3 pt-3 row ${expanded ? `expanded` : ``}`">
+  <div :class="`dropdown-container card mx-3 p-3 mb-3 row ${expanded ? `expanded` : ``}`">
     <div class="dropdown-preview col-12">
       <slot name="dropdown-preview"/>
     </div>
-    <div class="dropdown-content col-12 m-3">
+    <div class="dropdown-content col-12 pt-3">
       <slot name="dropdown-content"/>
     </div>
-    <div class="dropdown-button clickable" @click="expanded = !expanded">
+    <div v-if="!disable" class="dropdown-button clickable" @click="expanded = !expanded">
       <span class="fa fa-angle-right"/>
     </div>
   </div>
@@ -15,6 +15,13 @@
 <script>
 export default {
   name: 'Dropdown',
+  props: {
+    disable: {
+      type: Boolean,
+      required: false,
+      default: () => false
+    }
+  },
   data() {
     return {
       expanded: false

@@ -22,7 +22,7 @@
       <template slot="dropdown-content">
         <div class="my-3 row mx-0">
           <div class="col-8">
-            <video :src="fileUrl" controls/>
+            <video :src="fileUrl" controls width="100%"/>
           </div>
           <ul class="col-4 list-unstyled text-secondary text-uppercase">
             <li><span class="font-weight-bold">Author: </span><span>{{ meta.author }}</span></li>

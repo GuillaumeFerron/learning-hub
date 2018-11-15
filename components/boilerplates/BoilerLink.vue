@@ -1,5 +1,5 @@
 <template>
-  <div class="boiler-link">
+  <div class="boiler-link  card mx-3 p-3 mb-3">
     <div class="col-12">
       <div class="boiler-type col-1 text-secondary">
         <span :class="`${type.icon.prefix}${type.icon.slug}`"/>
@@ -20,7 +20,6 @@
         </div>
       </div>
     </div>
-    <hr>
   </div>
 </template>
 
