@@ -3,12 +3,12 @@
     <div class="loader-content">
       <div id="cube-container">
         <div id="cube" class="animate">
-          <div> <img src="/images/preloader/side1.svg"> </div>
-          <div> <img src="/images/preloader/side2.svg"> </div>
-          <div> <img src="/images/preloader/side3.svg"> </div>
-          <div> <img src="/images/preloader/side4.svg"> </div>
-          <div> <img src="/images/preloader/side5.svg"> </div>
-          <div> <img src="/images/preloader/side6.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side1.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side2.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side3.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side4.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side5.svg"> </div>
+          <div> <img src="~/assets/images/preloader/side6.svg"> </div>
         </div>
       </div>
     </div>

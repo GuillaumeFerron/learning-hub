@@ -16,7 +16,12 @@ export default {
   components: { NavBar },
   mixins: [
     Navigation
-  ]
+  ],
+  head() {
+    return {
+      title: `CD | ${this.$route.path !== '/' ? this.$options.filters.navigationFormat(this.$route.name) : 'Learning Hub'}`
+    }
+  }
 }
 </script>
 
