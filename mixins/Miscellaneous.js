@@ -1,4 +1,4 @@
-import Notification from '@/mixins/Notification'
+import Notification from '@/mixins/Notification.js'
 
 export default {
   mixins: [Notification],

@@ -1,6 +1,7 @@
 <template>
   <div id="default-container" class="row mx-0">
     <nav-bar/>
+    <notification-queue/>
     <div class="col-10">
       <h3 class="py-4">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
       <nuxt/>
@@ -11,9 +12,10 @@
 <script>
 import Miscellaneous from '~/mixins/Miscellaneous.js'
 import NavBar from '../components/utils/NavBar'
+import NotificationQueue from '../components/notifications/NotificationQueue'
 
 export default {
-  components: { NavBar },
+  components: { NotificationQueue, NavBar },
   mixins: [
     Miscellaneous
   ],
