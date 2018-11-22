@@ -1,7 +1,7 @@
 <template>
   <section id="nav-bar" class="col-2 border-right px-0">
     <div class="logo row py-3 border-bottom mx-0">
-      <img src="/images/cd_color_1.png" class="mx-auto" alt="CandyDigital Logo" width="80" height="50">
+      <nuxt-link :to="'/'" class="mx-auto logo-link"><img src="/images/cd_color_1.png" alt="CandyDigital Logo" width="80" height="50"></nuxt-link>
     </div>
     <div class="nav mt-5 d-flex flex-column">
       <div v-for="(route, index) in navigation.routes" :key="index" class="mt-3">
@@ -33,6 +33,10 @@ export default {
 
 <style scoped lang="scss">
   #nav-bar {
+    .logo-link {
+      border-left: none !important;
+    }
+
     a {
       color: #000;
       @include transition();

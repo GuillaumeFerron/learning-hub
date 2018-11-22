@@ -8,6 +8,9 @@
       <h2 class="subtitle">
         A learning hub for the CandyDigital web development team.
       </h2>
+      <h3 class="subtitle website-link">
+        <a href="https://candydigital.co" target="_blank">Go to website <span class="link-space">&rarr;</span></a>
+      </h3>
     </div>
   </section>
 </template>
@@ -22,7 +25,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
   .container {
     min-height: 100vh;
@@ -50,7 +53,22 @@ export default {
     padding-bottom: 15px;
   }
 
-  .links {
-    padding-top: 15px;
+  .website-link {
+    a {
+      text-decoration: none;
+      color: #526488;
+
+      .link-space {
+        @include transition();
+      }
+    }
+
+    &:hover {
+      a {
+        .link-space {
+          margin-left: 10px;
+        }
+      }
+    }
   }
 </style>

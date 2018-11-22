@@ -34,11 +34,10 @@ export default {
 <style lang="scss" scoped>
   #loader-container {
     display:table;
-    min-height:100%;
     overflow-x:hidden;
     /*overflow-y:hidden;*/
     vertical-align:middle;
-    top: -20%;
+    top: 20%;
     left: 50%;
     position: absolute;
     @include transform(translate(-50%, 0));

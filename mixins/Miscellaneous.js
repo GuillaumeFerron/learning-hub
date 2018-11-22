@@ -30,6 +30,10 @@ export default {
      */
     humanReadable(string, firstUppercase = true, nextUppercase = false, allUppercase = false, allLowercase = false) {
       let humanReadable = ''
+
+      if (!string) {
+        return ''
+      }
       const splittedString = string.replace(/-/g, ' ').replace(/_/g, ' ').split(' ')
 
       splittedString.forEach((elem, index) => {
