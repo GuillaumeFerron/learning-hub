@@ -31,16 +31,17 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   #loader-container {
     display:table;
-    width:100%;
-    height:100%;
     min-height:100%;
     overflow-x:hidden;
     /*overflow-y:hidden;*/
     vertical-align:middle;
-    top: 0;
+    top: -20%;
+    left: 50%;
+    position: absolute;
+    @include transform(translate(-50%, 0));
   }
 
   .loader-content {
