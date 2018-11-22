@@ -2,24 +2,24 @@
   <div id="default-container" class="row mx-0">
     <nav-bar/>
     <div class="col-10">
-      <h3 class="py-4 text-uppercase">{{ $options.filters.navigationFormat($route.name) }}</h3>
+      <h3 class="py-4">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
       <nuxt/>
     </div>
   </div>
 </template>
 
 <script>
-import Navigation from '~/mixins/Navigation.js'
+import Miscellaneous from '~/mixins/Miscellaneous.js'
 import NavBar from '../components/utils/NavBar'
 
 export default {
   components: { NavBar },
   mixins: [
-    Navigation
+    Miscellaneous
   ],
   head() {
     return {
-      title: `CD | ${this.$route.path !== '/' ? this.$options.filters.navigationFormat(this.$route.name) : 'Learning Hub'}`
+      title: `CD | ${this.$route.path !== '/' ? this.$options.filters.humanReadable(this.$route.name) : 'Learning Hub'}`
     }
   }
 }

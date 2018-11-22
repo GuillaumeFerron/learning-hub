@@ -5,7 +5,7 @@
         <div class="col-12">
           <span>{{ name }}</span>
           <span class="fa fa-code"/>
-          <span class="fa fa-copy clickable" @click="copyCode"/>
+          <span class="fa fa-copy clickable" @click="copyText(code)"/>
         </div>
         <div class="col-12">
           <small class="text-secondary">{{ style_description }}</small>
@@ -24,12 +24,12 @@
 <script>
 import Tag from '../utils/Tag'
 import Dropdown from '../utils/Dropdown'
-import Notification from '@/mixins/Notification'
+import Miscalleneous from '@/mixins/Miscellaneous'
 
 export default {
   name: 'CodeViewer',
   components: { Tag, Dropdown },
-  mixins: [Notification],
+  mixins: [Miscalleneous],
   props: {
     code: {
       type: String,
@@ -65,22 +65,6 @@ export default {
         readOnly: 'nocursor',
         showCursorWhenSelecting: false
       }
-    }
-  },
-  methods: {
-    /**
-     * Copies the code
-     */
-    copyCode() {
-      // TODO : Make it a mixin
-      const el = document.createElement('textarea')
-      el.value = this.code
-      document.body.appendChild(el)
-      el.select()
-      document.execCommand('copy')
-      document.body.removeChild(el)
-
-      this.notification('Text copied')
     }
   }
 }

@@ -9,40 +9,9 @@ import { cheatsheetsState, cheatsheetsGetters } from './cheatsheets/index'
 import { boilerplatesState, boilerplatesGetters } from './boilerplates/index'
 import { videosState, videosGetters } from './videos/index'
 import { codestylesState, codestylesGetters } from './code_styles/index'
+import { navigationState, navigationGetters } from './navigation/index'
 
 const createStore = () => new Vuex.Store({
-  state: () => ({
-    routes: [
-      {
-        name: 'home',
-        path: '/',
-        icon: 'fa fa-home'
-      },
-      {
-        name: 'boilerplates',
-        path: '/boilerplates',
-        icon: 'fa fa-link'
-      },
-      {
-        name: 'cheatsheets',
-        path: '/cheatsheets',
-        icon: 'fa fa-paperclip'
-      },
-      {
-        name: 'code_styles',
-        path: '/codestyles',
-        icon: 'fa fa-code'
-      },
-      {
-        name: 'videos',
-        path: '/videos',
-        icon: 'fa fa-video'
-      }
-    ]
-  }),
-  getters: {
-    routes: state => state.routes
-  },
   modules: {
     namespaced: true,
     cheatsheets: {
@@ -60,6 +29,10 @@ const createStore = () => new Vuex.Store({
     code_styles: {
       state: codestylesState,
       getters: codestylesGetters
+    },
+    navigation: {
+      state: navigationState,
+      getters: navigationGetters
     }
   }
 })

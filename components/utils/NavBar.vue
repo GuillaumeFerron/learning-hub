@@ -4,10 +4,10 @@
       <img src="/images/cd_color_1.png" class="mx-auto" alt="CandyDigital Logo" width="80" height="50">
     </div>
     <div class="nav mt-5 d-flex flex-column">
-      <div v-for="(route, index) in $store.state.routes" :key="index" class="mt-3">
+      <div v-for="(route, index) in navigation.routes" :key="index" class="mt-3">
         <nuxt-link :to="route.path" class="px-3 py-2">
           <span :class="route.icon"/>
-          {{ route.name | navigationFormat }}
+          {{ $options.filters.humanReadable(route.name, true, true) }}
         </nuxt-link>
       </div>
     </div>
@@ -15,13 +15,19 @@
 </template>
 
 <script>
-import Navigation from '~/mixins/Navigation.js'
+import Miscellaneous from '~/mixins/Miscellaneous.js'
+import { mapState } from 'vuex'
 
 export default {
   name: 'NavBar',
   mixins: [
-    Navigation
-  ]
+    Miscellaneous
+  ],
+  computed: {
+    ...mapState({
+      navigation: state => state.navigation
+    })
+  }
 }
 </script>
 
