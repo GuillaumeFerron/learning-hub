@@ -2,7 +2,7 @@
   <div id="default-container" class="row mx-0">
     <nav-bar/>
     <div class="col-10">
-      <h3 class="py-4 text-uppercase">{{ $route.path !== '/' ? $options.filters.navigationFormat($route.name) : '' }}</h3>
+      <h3 class="py-4 text-uppercase">{{ $options.filters.navigationFormat($route.name) }}</h3>
       <nuxt/>
     </div>
   </div>

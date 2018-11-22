@@ -8,12 +8,13 @@ import Vuex from 'vuex'
 import { cheatsheetsState, cheatsheetsGetters } from './cheatsheets/index'
 import { boilerplatesState, boilerplatesGetters } from './boilerplates/index'
 import { videosState, videosGetters } from './videos/index'
+import { codestylesState, codestylesGetters } from './code_styles/index'
 
 const createStore = () => new Vuex.Store({
   state: () => ({
     routes: [
       {
-        name: 'index',
+        name: 'home',
         path: '/',
         icon: 'fa fa-home'
       },
@@ -26,6 +27,11 @@ const createStore = () => new Vuex.Store({
         name: 'cheatsheets',
         path: '/cheatsheets',
         icon: 'fa fa-paperclip'
+      },
+      {
+        name: 'code_styles',
+        path: '/codestyles',
+        icon: 'fa fa-code'
       },
       {
         name: 'videos',
@@ -50,6 +56,10 @@ const createStore = () => new Vuex.Store({
     videos: {
       state: videosState,
       getters: videosGetters
+    },
+    code_styles: {
+      state: codestylesState,
+      getters: codestylesGetters
     }
   }
 })
