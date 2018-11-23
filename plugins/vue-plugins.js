@@ -13,8 +13,8 @@ if (process.browser) {
 }
 
 /* -------- Mixins -------- */
-import Notification from '@/mixins/Notification'
-import Miscellaneous from '@/mixins/Miscellaneous'
+import notification from '@/mixins/notification'
+import miscellaneous from '@/mixins/miscellaneous'
 
-Vue.mixin(Notification)
-Vue.mixin(Miscellaneous)
+Vue.mixin(notification)
+Vue.mixin(miscellaneous)

@@ -27,13 +27,13 @@
 
 <script>
 import Tag from '../utils/Tag'
-import FileAccess from '~/mixins/FileAccess.js'
+import fileAccess from '~/mixins/fileAccess.js'
 import Dropdown from '../utils/Dropdown'
 
 export default {
   name: 'File',
   components: { Dropdown, Tag },
-  mixins: [FileAccess],
+  mixins: [fileAccess],
   props: {
     name: {
       type: String,

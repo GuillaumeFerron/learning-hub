@@ -1,6 +1,6 @@
 <template>
   <div class="notification-queue">
-    <notification v-for="(notification, index) in notifications.queue" :key="`notification-${index}`" :notification-content="notification"/>
+    <notification v-for="(notification, index) in notifications.queue" :key="`notification-${index}`" :notification-content="notification.content"/>
   </div>
 </template>
 
