@@ -6,7 +6,7 @@
     <div class="dropdown-content col-12 pt-3">
       <slot name="dropdown-content"/>
     </div>
-    <div v-if="!disable" class="dropdown-button clickable" @click="expanded = !expanded">
+    <div v-if="!disable" class="dropdown-button clickable" @click="triggerDropdown">
       <span class="fa fa-angle-right"/>
     </div>
   </div>
@@ -25,6 +25,12 @@ export default {
   data() {
     return {
       expanded: false
+    }
+  },
+  methods: {
+    triggerDropdown() {
+      this.expanded = !this.expanded
+      this.$emit('dropdownTrigger', this.expanded)
     }
   }
 }

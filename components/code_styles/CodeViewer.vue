@@ -1,11 +1,16 @@
 <template>
   <div class="code-viewer">
-    <dropdown>
+    <dropdown @dropdownTrigger="handleDropdownTrigger">
       <template slot="dropdown-preview">
         <div class="col-12">
           <span>{{ name }}</span>
-          <span class="fa fa-code"/>
-          <span class="fa fa-copy clickable" @click="copyText(code)"/>
+          <span class="fa fa-code code-icons"/>
+          <transition name="page">
+            <span v-if="expanded" class="code-icons clickable" @click="copyText(code)">
+              <span class="fa fa-copy"/>
+              Copy
+            </span>
+          </transition>
         </div>
         <div class="col-12">
           <small class="text-secondary">{{ style_description }}</small>
@@ -52,6 +57,11 @@ export default {
       default: () => []
     }
   },
+  data() {
+    return {
+      expanded: false
+    }
+  },
   computed: {
     options: function() {
       return {
@@ -64,10 +74,17 @@ export default {
         showCursorWhenSelecting: false
       }
     }
+  },
+  methods: {
+    handleDropdownTrigger(expanded) {
+      this.expanded = expanded
+    }
   }
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  .code-icons {
+    color: $cd-pink !important;
+  }
 </style>
