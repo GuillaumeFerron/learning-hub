@@ -12,18 +12,21 @@ export default {
       document.body.removeChild(el)
 
       const notification = {
-        id: this.generateId,
+        id: this.generateId(),
         content: 'Text copied !',
         priority: 0,
         mode: 0,
         delay: 3000
       }
       this.notification(notification.id, notification.content, notification.priority, notification.mode, notification.delay)
-    }
-  },
-  computed: {
-    generateId() {
-      return '_' + Math.random().toString(36).substr(2, 9)
+    },
+
+    /**
+     * Generates an id
+     * @returns {string}
+     */
+    generateId(length = 10) {
+      return '_' + Math.random().toString(36).substr(2, length - 1)
     }
   },
   filters: {

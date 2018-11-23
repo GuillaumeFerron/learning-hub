@@ -70,6 +70,22 @@ const
      */
     POP_NOTIFICATION: state => {
       state.queue.shift()
+    },
+
+    /**
+     * Removes a notification for a given ID
+     *
+     * @param state
+     * @param id
+     * @constructor
+     */
+    REMOVE_NOTIFICATION: (state, id) => {
+      state.queue.forEach((elem, index) => {
+        if (elem.id === id) {
+          state.queue.splice(index, 1)
+          return
+        }
+      })
     }
   }
 
@@ -120,6 +136,20 @@ const
         setTimeout(() => {
           commit('POP_NOTIFICATION')
         }, delay)
+
+        return resolve()
+      })
+    },
+
+    /**
+     * Removes a notificartion for a given id
+     *
+     * @param commit
+     * @param id
+     */
+    removeNotification: ({ commit }, id) => {
+      return new Promise((resolve) => {
+        commit('REMOVE_NOTIFICATION', id)
 
         return resolve()
       })
