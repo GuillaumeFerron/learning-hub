@@ -10,15 +10,11 @@
 </template>
 
 <script>
-import Miscellaneous from '~/mixins/Miscellaneous.js'
 import NavBar from '../components/utils/NavBar'
 import NotificationQueue from '../components/notifications/NotificationQueue'
 
 export default {
   components: { NotificationQueue, NavBar },
-  mixins: [
-    Miscellaneous
-  ],
   head() {
     return {
       title: `CD | ${this.$route.path !== '/' ? this.$options.filters.humanReadable(this.$route.name) : 'Learning Hub'}`

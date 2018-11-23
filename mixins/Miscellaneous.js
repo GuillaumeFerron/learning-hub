@@ -1,7 +1,4 @@
-import Notification from '@/mixins/Notification.js'
-
 export default {
-  mixins: [Notification],
   methods: {
     /**
      * Copies the text

@@ -15,14 +15,10 @@
 </template>
 
 <script>
-import Miscellaneous from '~/mixins/Miscellaneous.js'
 import { mapState } from 'vuex'
 
 export default {
   name: 'NavBar',
-  mixins: [
-    Miscellaneous
-  ],
   computed: {
     ...mapState({
       navigation: state => state.navigation

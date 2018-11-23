@@ -24,12 +24,10 @@
 <script>
 import Tag from '../utils/Tag'
 import Dropdown from '../utils/Dropdown'
-import Miscalleneous from '@/mixins/Miscellaneous'
 
 export default {
   name: 'CodeViewer',
   components: { Tag, Dropdown },
-  mixins: [Miscalleneous],
   props: {
     code: {
       type: String,

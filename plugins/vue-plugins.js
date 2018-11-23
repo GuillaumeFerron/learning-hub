@@ -3,8 +3,7 @@
 
 import Vue from 'vue'
 
-/* Plugins */
-
+/* -------- Plugins -------- */
 import { TimelineMax } from 'gsap/umd/TweenMax'
 
 if (process.browser) {
@@ -12,3 +11,10 @@ if (process.browser) {
 
   Vue.use(VueCodeMirror)
 }
+
+/* -------- Mixins -------- */
+import Notification from '@/mixins/Notification'
+import Miscellaneous from '@/mixins/Miscellaneous'
+
+Vue.mixin(Notification)
+Vue.mixin(Miscellaneous)
