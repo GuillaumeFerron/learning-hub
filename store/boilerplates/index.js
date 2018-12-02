@@ -1,4 +1,5 @@
 const boilerplatesState = () => ({
+  directory: 'boilerplates',
   links: {
     cd_nuxt_boilerlate: {
       name: 'Nuxt Boilerplate',
@@ -15,9 +16,10 @@ const boilerplatesState = () => ({
       tags: ['Nuxt', 'Bootstrap', 'JQuery', 'Scss']
     }
   }
-});
+})
 const boilerplatesGetters = () => ({
+  directory: state => state.boilerplates.directory,
   links: state => state.boilerplates.files
-});
+})
 
-export { boilerplatesGetters, boilerplatesState };
+export { boilerplatesGetters, boilerplatesState }

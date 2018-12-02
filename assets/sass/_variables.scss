@@ -4,3 +4,52 @@ $cd-blue: #286480;
 $cd-pink: #d14582;
 $cd-yellow: #f6be41;
 $cd-purple: #300c4a;
+
+$nav-background-active: rgba(209, 69, 130, 0.05);
+
+// Notifications
+$mode-0: rgb(0, 100, 75);
+$mode-0-background: rgba(0, 100, 75, 0.3);
+$mode-0-text: rgb(0, 150, 0);
+$mode-1: rgb(100, 100, 100);
+$mode-1-background: rgba(100, 100, 100, 0.3);
+$mode-1-text: rgb(0, 0, 0);
+$mode-2: rgb(100, 0, 50);
+$mode-2-background: rgba(100, 0, 50, 0.3);
+$mode-2-text: rgb(150, 0, 0);
+
+
+// Responsiveness
+
+$grid-breakpoints: () !default;
+$grid-breakpoints: map-merge(
+                (
+                        xs: 0,
+                        sm: 576px,
+                        md: 768px,
+                        lg: 992px,
+                        xl: 1200px
+                ),
+                $grid-breakpoints
+);
+
+// the :export directive is the magic sauce for webpack
+:export {
+  // Primary colors
+  cd_blue: $cd-blue;
+  cd_pink: $cd-pink;
+  cd_yellow: $cd-yellow;
+  cd_purple: $cd-purple;
+  nav_background_active: $nav-background-active;
+
+  //Notification
+  mode_0: $mode-0;
+  mode_0_background: $mode-0;
+  mode_0_text: $mode-0;
+  mode_1: $mode-1;
+  mode_1_background: $mode-1;
+  mode_1_text: $mode-1;
+  mode_2: $mode-2;
+  mode_2_background: $mode-2;
+  mode_2_text: $mode-2;
+}

@@ -8,3 +8,14 @@
 .page-enter, .page-leave-to {
   opacity: 0;
 }
+
+
+/**
+  Notifications transitions
+ */
+.notification-enter-active, .notification-leave-active {
+  transition: opacity .3s;
+}
+.notification-enter, .notification-leave-to {
+  opacity: 0;
+}

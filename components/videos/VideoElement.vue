@@ -1,6 +1,6 @@
 <template>
-  <div class="file">
-    <dropdown :disable="file_extension !== '.pdf'">
+  <div class="video-element">
+    <dropdown>
       <template slot="dropdown-preview">
         <div class="col-12">
           <span>{{ name }}</span>
@@ -12,14 +12,24 @@
           </a>
         </div>
         <div class="col-12">
-          <small class="text-secondary">{{ file_description }}</small>
+          <small class="text-secondary">{{ video_description }}</small>
         </div>
         <div class="col-12">
-          <tag v-for="(tag, index) in file_tags" :tag="tag" :key="index"/>
+          <tag v-for="(tag, index) in video_tags" :tag="tag" :key="index"/>
         </div>
       </template>
+
       <template slot="dropdown-content">
-        <embed :src="fileUrl" type="application/pdf" width="100%" height="500">
+        <div class="my-3 row mx-0">
+          <div class="col-8">
+            <video :src="fileUrl" controls width="100%"/>
+          </div>
+          <ul class="col-4 list-unstyled text-secondary text-uppercase">
+            <li><span class="font-weight-bold">Author: </span><span>{{ meta.author }}</span></li>
+            <li><span class="font-weight-bold">Length: </span><span>{{ meta.length }}</span></li>
+            <li><span class="font-weight-bold">Type: </span><span>{{ file_extension }}</span></li>
+          </ul>
+        </div>
       </template>
     </dropdown>
   </div>
@@ -31,7 +41,7 @@ import fileAccess from '~/mixins/fileAccess.js'
 import Dropdown from '../utils/Dropdown'
 
 export default {
-  name: 'File',
+  name: 'VideoElement',
   components: { Dropdown, Tag },
   mixins: [fileAccess],
   props: {
@@ -46,21 +56,25 @@ export default {
     file_extension: {
       type: String,
       required: false,
-      default: '.pdf'
+      default: '.mp4'
     },
     directory: {
       type: String,
       required: true
     },
-    file_description: {
+    video_description: {
       type: String,
       required: false,
-      default: 'A CandyDigital cheatsheet.'
+      default: 'A CandyDigital video tutorial.'
     },
-    file_tags: {
+    video_tags: {
       type: Array,
       required: false,
       default: () => []
+    },
+    meta: {
+      type: Object,
+      required: true
     }
   }
 }
