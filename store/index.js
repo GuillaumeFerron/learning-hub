@@ -1,36 +1,18 @@
 /* eslint import/no-extraneous-dependencies : 0 */
 
-import Vuex from 'vuex';
+import Vuex from 'vuex'
 
 /**
  * Modules
  */
-import {cheatsheetsState, cheatsheetsGetters} from './cheatsheets/index';
-import {boilerplatesState, boilerplatesGetters} from './boilerplates/index';
+import { cheatsheetsState, cheatsheetsGetters } from './cheatsheets/index'
+import { boilerplatesState, boilerplatesGetters } from './boilerplates/index'
+import { videosState, videosGetters } from './videos/index'
+import { codestylesState, codestylesGetters } from './code_styles/index'
+import { navigationState, navigationGetters } from './navigation/index'
+import { notificationsState, notificationsGetters, notificationsMutations, notificationsActions } from './notifications/index'
 
 const createStore = () => new Vuex.Store({
-  state: () => ({
-    routes: [
-      {
-        name: 'index',
-        path: '/',
-        icon: 'fa fa-home'
-      },
-      {
-        name: 'boilerplates',
-        path: '/boilerplates',
-        icon: 'fa fa-link'
-      },
-      {
-        name: 'cheatsheets',
-        path: '/cheatsheets',
-        icon: 'fa fa-paperclip'
-      }
-    ]
-  }),
-  getters: {
-    routes: state => state.routes
-  },
   modules: {
     namespaced: true,
     cheatsheets: {
@@ -40,8 +22,26 @@ const createStore = () => new Vuex.Store({
     boilerplates: {
       state: boilerplatesState,
       getters: boilerplatesGetters
+    },
+    videos: {
+      state: videosState,
+      getters: videosGetters
+    },
+    code_styles: {
+      state: codestylesState,
+      getters: codestylesGetters
+    },
+    navigation: {
+      state: navigationState,
+      getters: navigationGetters
+    },
+    notifications: {
+      state: notificationsState,
+      getters: notificationsGetters,
+      mutations: notificationsMutations,
+      actions: notificationsActions
     }
   }
-});
+})
 
-export default createStore;
+export default createStore

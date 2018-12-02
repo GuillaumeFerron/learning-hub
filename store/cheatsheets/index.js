@@ -44,11 +44,11 @@ const cheatsheetsState = () => ({
       tags: ['wordpress', 'backup']
     }
   }
-});
+})
 
 const cheatsheetsGetters = () => ({
   directory: state => state.cheatsheets.directory,
   files: state => state.cheatsheets.files
-});
+})
 
-export { cheatsheetsGetters, cheatsheetsState };
+export { cheatsheetsGetters, cheatsheetsState }
