@@ -1,7 +1,7 @@
 
-# cd-nuxt-boilerplate
+# learning-hub
 
-A boilerplate for Nuxt projects. It includes Bootstrap | SCSS | JQuery.
+A learning hub for the Candy Digital web development team.
 
 ## Getting Started
 
