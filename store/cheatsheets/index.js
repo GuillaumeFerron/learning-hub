@@ -42,6 +42,13 @@ const cheatsheetsState = () => ({
       file_extension: '.pdf',
       description: 'A description of the backing up process in Wordpress.',
       tags: ['wordpress', 'backup']
+    },
+    git_flow: {
+      name: 'Git Flow',
+      file: 'CHEATSHEET_GIT_FLOW',
+      file_extension: '.pdf',
+      description: 'A quick run down of our development team git process.',
+      tags: ['git', 'github']
     }
   }
 })
