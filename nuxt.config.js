@@ -43,8 +43,15 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/sass/index.scss'
   ],
+
+  styleResources: {
+    scss: [
+      '@/assets/sass/_variables.scss',
+      '@/assets/sass/_mixins.scss',
+      '@/assets/sass/index.scss'
+    ]
+  },
 
   /*
   ** Plugins to load before mounting the App
@@ -59,12 +66,7 @@ module.exports = {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     'bootstrap-vue/nuxt',
-    ['nuxt-sass-resources-loader',
-      [
-        '@/assets/sass/_variables.scss',
-        '@/assets/sass/_mixins.scss'
-      ]
-    ]
+    '@nuxtjs/style-resources'
   ],
 
   /*
