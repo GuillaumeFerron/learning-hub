@@ -3,7 +3,12 @@
     <nav-bar/>
     <notification-queue/>
     <div class="col-10">
-      <h3 v-if="$route && $route.name" class="py-4">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
+      <div class="row mx-0">
+        <h3 v-if="$route && $route.name" class="py-4 col-3">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
+        <div class="col-9">
+          <search/>
+        </div>
+      </div>
       <nuxt/>
     </div>
   </div>
@@ -12,9 +17,10 @@
 <script>
 import NavBar from '../components/utils/NavBar'
 import NotificationQueue from '../components/notifications/NotificationQueue'
+import Search from '../components/utils/Search'
 
 export default {
-  components: { NotificationQueue, NavBar },
+  components: { Search, NotificationQueue, NavBar },
   head() {
     return {
       title: `CD | ${this.$route.path !== '/' ? this.$options.filters.humanReadable(this.$route.name) : 'Learning Hub'}`
