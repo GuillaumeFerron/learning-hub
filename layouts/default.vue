@@ -3,7 +3,7 @@
     <nav-bar/>
     <notification-queue/>
     <div class="col-10">
-      <h3 class="py-4">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
+      <h3 v-if="$route && $route.name" class="py-4">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
       <nuxt/>
     </div>
   </div>
