@@ -56,7 +56,7 @@ export default {
 
     &.expanded {
       .dropdown-content {
-        max-height: 500px;
+        max-height: 650px;
       }
 
       .dropdown-button {

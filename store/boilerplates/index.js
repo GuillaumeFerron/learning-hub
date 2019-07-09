@@ -3,7 +3,7 @@ const boilerplatesState = () => ({
   searchKey: 'links',
   links: {
     cd_nuxt_boilerlate: {
-      name: 'Nuxt Boilerplate',
+      name: 'Nuxt Boilerplate (old)',
       type: {
         name: 'github',
         icon: {
@@ -12,7 +12,7 @@ const boilerplatesState = () => ({
           slug: 'github'
         }
       },
-      link: 'https://bitbucket.org/cddevteam/cd-nuxt-boilerplate/src',
+      link: 'https://github.com/GuillaumeFerron/nuxt-boilerplate',
       description: 'A boilerplate for Nuxt projects. It includes Bootstrap | SCSS | JQuery.',
       tags: ['Nuxt', 'Bootstrap', 'JQuery', 'Scss']
     }

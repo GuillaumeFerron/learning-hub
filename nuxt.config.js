@@ -3,6 +3,9 @@ const pkg = require('./package')
 module.exports = {
   mode: 'universal',
 
+  server: {
+    port: 3005
+  },
   /*
   ** Headers of the page
   */
@@ -43,8 +46,15 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    '@/assets/sass/index.scss'
   ],
+
+  styleResources: {
+    scss: [
+      '@/assets/sass/_variables.scss',
+      '@/assets/sass/_mixins.scss',
+      '@/assets/sass/index.scss'
+    ]
+  },
 
   /*
   ** Plugins to load before mounting the App
