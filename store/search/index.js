@@ -16,7 +16,7 @@ const searchState = () => ({
 const searchGetters = {
   searchResults: state => state.searchSlug ? state.searchItems.filter(elem => elem.searchableSlug.indexOf(state.searchSlug.toLowerCase()) !== -1 || elem.category.indexOf(state.searchSlug.toLowerCase()) !== -1).sort((a, b) => {
     return a.category.localeCompare(b.category)
-  }) : []
+  }).slice(0, 5) : []
 }
 
 const searchMutations = {

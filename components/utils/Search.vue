@@ -7,9 +7,10 @@
       v-model="searchTerm"
       :placeholder="initSearchTerm"
       contenteditable="true"
-      class="search-container h-50 px-2"
+      class="search-container h-50"
       @focus="handleFocus"
       @blur="handleBlur"/>
+    <i class="fa fa-search search-icon"></i>
     <search-results :display="!searchTerm || escaped" :search-term="searchTerm"></search-results>
   </div>
 </template>
@@ -58,6 +59,8 @@ export default {
     handleEscape(e) {
       if (`${e.key}` === 'Escape') {
         this.escaped = true
+        this.searchTerm = ''
+        this.$store.commit('SET_SEARCH_SLUG', '')
 
         window.removeEventListener('keydown', this.handleEscape)
       }
@@ -79,11 +82,21 @@ export default {
     font-size: 25px;
     position: absolute;
     top: 50%;
+    padding-left: 12px;
+    padding-right: 40px;
     @include transform(translate(0, -65%));
     right: 0;
 
     &:focus {
       outline: none;
     }
+  }
+
+  .search-icon {
+    position: absolute;
+    right: 14px;
+    color: #aaa;
+    font-size: 20px;
+    top: 28px;
   }
 </style>

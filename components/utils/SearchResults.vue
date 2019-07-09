@@ -41,6 +41,7 @@
           :directory="videos.directory"/>
       </div>
     </div>
+    <small v-if="$store.getters.searchResults.length >= 5" class="pl-4">More results are not displayed...</small>
   </div>
 </template>
 
@@ -87,6 +88,7 @@ export default {
     overflow: scroll;
     background-color: rgba(255, 255, 255, 0.9);
     z-index: 999;
-    width: calc(100vw - 240px);
+    width: calc(100vw - 242px);
+    margin-right: 1px;
   }
 </style>

@@ -4,7 +4,10 @@
     <notification-queue/>
     <div class="col-10 main-container">
       <div class="row mx-0">
-        <h3 v-if="$route && $route.name" class="py-4 col-3">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
+        <transition name="slide-fade" mode="out-in">
+          <h3 v-if="$store.state.search.searchSlug.length" key="search-title" class="py-4 col-3">Search results</h3>
+          <h3 v-else-if="$route && $route.name" key="nav-title" class="py-4 col-3">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
+        </transition>
         <div class="col-9">
           <search/>
         </div>
