@@ -25,6 +25,9 @@ export default {
     return {
       title: `CD | ${this.$route.path !== '/' ? this.$options.filters.humanReadable(this.$route.name) : 'Learning Hub'}`
     }
+  },
+  mounted() {
+    this.$store.dispatch('init')
   }
 }
 </script>

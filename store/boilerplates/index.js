@@ -1,5 +1,6 @@
 const boilerplatesState = () => ({
   directory: 'boilerplates',
+  searchKey: 'links',
   links: {
     cd_nuxt_boilerlate: {
       name: 'Nuxt Boilerplate',
