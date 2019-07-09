@@ -2,6 +2,20 @@ const cheatsheetsState = () => ({
   directory: '/cheatsheets/',
   searchKey: 'files',
   files: {
+    front_end_part_1: {
+      name: 'Front End - Part 1',
+      file: 'front_end_part_1',
+      file_extension: '.pdf',
+      description: 'A pretty solid first front end tutorial.',
+      tags: ['Javascript', 'ES5', 'Best Practices', 'HTML', 'CSS', 'Bootstrap', 'Workflow']
+    },
+    front_end_part_2: {
+      name: 'Front End - Part 2',
+      file: 'front_end_part_2',
+      file_extension: '.pdf',
+      description: 'The part 2 of our front end tutorial series. This one tackles ES6. WIP',
+      tags: ['WIP', 'Javascript', 'ES6', 'Best Practices']
+    },
     animation_development: {
       name: 'Animation Development',
       file: 'CHEATSHEET_ANIMATIONS_DEVELOPMENT',
