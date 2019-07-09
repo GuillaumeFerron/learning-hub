@@ -72,13 +72,6 @@ module.exports = {
     '@nuxtjs/style-resources'
   ],
 
-  styleResources: {
-    sass: [
-      '@/assets/sass/_variables.scss',
-      '@/assets/sass/_mixins.scss'
-    ]
-  },
-
   /*
    * Router
    */
