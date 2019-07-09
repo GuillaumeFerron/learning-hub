@@ -20,13 +20,13 @@
 export default {
   mounted() {
     // eslint-disable-next-line no-undef
-    new TimelineMax({ repeat: -1 })
-      .to('#cube', 0.5, { rotation: 90 })
-      .to('#cube', 0.5, { rotationX: -90 })
-      .to('#cube', 0.5, { rotationY: 90 })
-      .to('#cube', 0.5, { rotation: 180 })
-      .to('#cube', 1.2, { rotationY: -180 })
-      .to('#cube', 0.5, { rotationX: -180 })
+    // new TimelineMax({ repeat: -1 })
+    //   .to('#cube', 0.5, { rotation: 90 })
+    //   .to('#cube', 0.5, { rotationX: -90 })
+    //   .to('#cube', 0.5, { rotationY: 90 })
+    //   .to('#cube', 0.5, { rotation: 180 })
+    //   .to('#cube', 1.2, { rotationY: -180 })
+    //   .to('#cube', 0.5, { rotationX: -180 })
   }
 }
 </script>

@@ -4,7 +4,7 @@
 import Vue from 'vue'
 
 /* -------- Plugins -------- */
-import { TimelineMax } from 'gsap/umd/TweenMax'
+// import { TimelineMax } from 'gsap/umd/TweenMax'
 
 if (process.browser) {
   var VueCodeMirror = require('vue-codemirror-lite')
