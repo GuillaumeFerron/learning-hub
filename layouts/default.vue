@@ -2,7 +2,7 @@
   <div id="default-container" class="row mx-0">
     <nav-bar/>
     <notification-queue/>
-    <div class="col-10">
+    <div class="col-10 main-container">
       <div class="row mx-0">
         <h3 v-if="$route && $route.name" class="py-4 col-3">{{ $options.filters.humanReadable($route.name, true, true, true) }}</h3>
         <div class="col-9">
@@ -54,5 +54,9 @@ export default {
 
   #default-container {
     min-height: 100vh;
+  }
+
+  .main-container {
+    border-left: 1px solid #dee2e6 !important;
   }
 </style>

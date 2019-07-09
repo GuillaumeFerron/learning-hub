@@ -72,14 +72,11 @@ export default {
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
     @include transition(all, 0.2s, ease-out);
-    border-bottom: solid 1px #aaa;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 6px;
+    border: solid 1px #aaa;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
     font-size: 25px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
     position: absolute;
     top: 50%;
     @include transform(translate(0, -65%));
