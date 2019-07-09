@@ -39,6 +39,7 @@ const eslint_code = `
   `
 
 const codestylesState = () => ({
+  searchKey: 'styles',
   styles: {
     eslint: {
       name: 'Eslint',

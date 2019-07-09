@@ -1,5 +1,6 @@
 const videosState = () => ({
   directory: '/videos/',
+  searchKey: 'files',
   files: {
     keyframes: {
       name: 'Keyframes Chrome Extension',
@@ -30,7 +31,7 @@ const videosState = () => ({
       description: 'In this Video We will be installing laravel and cleaning up framework to add API Authentication',
       meta: {
         author: 'PK',
-        length: '00:12:01'
+        length: '00:05:12'
       },
       tags: ['Nuxt.js', 'Laravel', 'Auth', 'Learn Hub']
     }

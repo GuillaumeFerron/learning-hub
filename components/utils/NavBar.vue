@@ -1,5 +1,5 @@
 <template>
-  <section id="nav-bar" class="col-2 border-right px-0">
+  <section id="nav-bar" class="col-2 px-0">
     <div class="logo row py-3 border-bottom mx-0">
       <nuxt-link :to="'/'" class="mx-auto logo-link"><img src="/images/cd_color_1.png" alt="CandyDigital Logo" width="80" height="50"></nuxt-link>
     </div>
