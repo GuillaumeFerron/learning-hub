@@ -1,11 +1,10 @@
 <template>
   <div
     id="search-results-container"
-    :style="{height: display ? '0px' : '100vh'}"
+    :style="{height: display ? '0px' : 'calc(100vh - 83px)'}"
     :class="`${display ? `py-0` : `py-4`} px-4`">
     <div v-for="(elem, index) in $store.getters.searchResults" :key="elem.category + index">
       <div v-if="elem.category === 'boilerplates' && boilerplates.links[elem.key]">
-        Boilerplates
         <boiler-link
           :name="boilerplates.links[elem.key].name"
           :type="boilerplates.links[elem.key].type"
@@ -15,7 +14,6 @@
           :directory="boilerplates.directory"></boiler-link>
       </div>
       <div v-else-if="elem.category === 'cheatsheets' && cheatsheets.files[elem.key]">
-        Cheatsheets
         <file
           :name="cheatsheets.files[elem.key].name"
           :file_name="cheatsheets.files[elem.key].file"
@@ -25,7 +23,6 @@
           :directory="cheatsheets.directory"></file>
       </div>
       <div v-else-if="elem.category === 'code_styles' && code_styles.styles[elem.key]">
-        Code Styles
         <code-viewer
           :code="code_styles.styles[elem.key].code"
           :name="code_styles.styles[elem.key].name"
@@ -34,7 +31,6 @@
           :style_tags="code_styles.styles[elem.key].tags"></code-viewer>
       </div>
       <div v-else-if="elem.category === 'videos' && videos.files[elem.key]">
-        Videos
         <video-element
           :name="videos.files[elem.key].name"
           :file_name="videos.files[elem.key].file"
