@@ -1,5 +1,6 @@
 const cheatsheetsState = () => ({
   directory: '/cheatsheets/',
+  searchKey: 'files',
   files: {
     animation_development: {
       name: 'Animation Development',

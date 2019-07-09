@@ -1,5 +1,6 @@
 const videosState = () => ({
   directory: '/videos/',
+  searchKey: 'files',
   files: {
     keyframes: {
       name: 'Keyframes Chrome Extension',

@@ -107,6 +107,7 @@ module.exports = {
     'no-multiple-empty-lines': [2, {
       'max': 1
     }],
+    'vue/html-self-closing': 0,
     'no-native-reassign': 2,
     'no-negated-in-lhs': 2,
     'no-new-object': 2,
